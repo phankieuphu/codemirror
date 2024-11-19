@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CodeMirror Demo</title>
+        <!-- CodeMirror CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css"
+        />
+    </head>
+    <body>
+        <h1>CodeMirror Example</h1>
+        <!-- Textarea for CodeMirror -->
+        <textarea id="code" name="code">// Write your code here...</textarea>
+
+        <!-- CodeMirror JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+        <!-- CodeMirror Modes (JavaScript) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/javascript/javascript.min.js"></script>
+
+        <script>
+            // Initialize CodeMirror
+            var editor = CodeMirror.fromTextArea(
+                document.getElementById("code"),
+                {
+                    lineNumbers: true, // Show line numbers
+                    mode: "javascript", // Syntax highlighting for JavaScript
+                    theme: "default", // Default theme
+                    tabSize: 2, // Set tab size to 2 spaces
+                },
+            );
+        </script>
+    </body>
+</html>
